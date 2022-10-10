@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    .tab {
+        border: 1px solid #000;
+        width: 200px;
+        text-align: center; 
+        height: 200px;       
+    }
+    .tab span {
+        margin: 5px 20px;                
+    }
+    .tab p {
+        display: none;
+    }
+    .tab .one {
+        color: red;
+    }
+    .tab  .two {
+        display: block;
+    }
+  </style>
+</head>
+<body>
+    <div class="tab">
+        <span class="one">A</span>
+        <span>B</span>
+        <span>C</span>
+        <p class="two">新笑傲差不多是比较不错就才能促进可能才看见三难上加难超时空初三</p>
+        <p>就女主哭不会随svvf</p>
+        <p>cnscnbcucv</p>
+    </div>
+    <script>
+        var tab = document.getElementsByClassName("tab")[0];
+        var span = tab.getElementsByTagName("span");
+        var ps = tab.getElementsByTagName("p");
+        for(var i=0;i<span.length;i++) {
+            span[i].index = i;
+            span[i].onclick = function() {
+                for(var j=0;j<span.length;j++) {
+                    span[j].className="";
+                    ps[j].className="";
+                }
+                span[this.index].className="one";
+                ps[this.index].className="two";
+            }
+        }
+    </script>
+</body>
+</html>
